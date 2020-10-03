@@ -1,0 +1,36 @@
+/*----------------------------------------*/
+/*  11.  Testimonial Area
+/*----------------------------------------*/
+.testimonial-area {
+    background-color: $color-green;
+}
+
+.single-testimonial {
+    & .top {
+        margin-bottom: 15px;
+        & img {
+            width: 59px;
+            height: 59px;
+            float: left;
+            margin-right: 19px;
+            border-radius: 50%;
+        }
+        & h3 {
+            font-size: 22px;
+            font-family: $font-montserrat;
+            font-weight: bold;
+            color: $color-white;
+            line-height: 16px;
+            margin-bottom: 6px;
+            margin-top: 8px;
+        }
+        & span {
+            color: $color-white;
+            font-family: $font-montserrat;
+            font-size: 15px;
+        }
+    }
+    & p {
+        color: $color-white;
+    }
+}

@@ -1,0 +1,22 @@
+// Font Family
+$font-montserrat: Montserrat;
+$font-poppins: 'Poppins', sans-serif;
+
+// Colors
+
+//Theme Color
+$color-green: #06ca75;
+$color-red: #ef476f;
+$color-blue: #00d8ff;
+$color-navy: #26547c;
+//Heading Color
+$heading-color: #525252;
+//Text Color
+$color-white: #fff;
+$text-color: #858585;
+//Responsive Variables
+$laptop-device : 'only screen and (min-width: 1200px) and (max-width: 1600px)';
+$desktop-device : 'only screen and (min-width: 992px) and (max-width: 1200px)';
+$tablet-device:'only screen and (min-width: 768px) and (max-width: 991px)';
+$large-mobile:'only screen and (max-width: 767px)';
+$small-mobile: 'only screen and (max-width: 479px)';

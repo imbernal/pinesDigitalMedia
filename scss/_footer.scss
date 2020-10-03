@@ -1,0 +1,177 @@
+/*----------------------------------------*/
+/*  15.  Footer Area
+/*----------------------------------------*/
+.footer-top-area {
+    background-color: #2b2b2b;
+    @media #{$tablet-device}{
+        & [class^="col-"]:nth-child(2n+1) {
+            clear: both;
+        }
+    }
+}
+.footer-widget {
+    & .title {
+        font-size: 18px;
+        text-transform: uppercase;
+        color: $color-white;
+        letter-spacing: 0.50px;
+        font-family: $font-montserrat;
+        font-weight: bold;
+        line-height: 14px;
+        margin-top: 15px;
+        margin-bottom: 40px;
+        & span {
+            color: $color-green;
+        }
+    }
+}
+
+.about-widget {
+    & img {
+        margin-bottom: 25px;
+    }
+    & p {
+        font-weight: 300;
+        line-height: 25px;
+        color: $color-white;
+    }
+}
+.contact-info-widget {
+    & p {
+        font-weight: 300;
+        font-size: 13px;
+        letter-spacing: 0.2px;
+        color: $color-white;
+        display: block;
+    }
+    & ul {
+        & li {
+            font-weight: 300;
+            font-size: 13px;
+            letter-spacing: 0.2px;
+            color: $color-white;
+            display: block;
+        }
+    }
+}
+.link-widget {
+    & ul {
+        & li {
+            margin-bottom: 4px;
+            & a  {
+                font-weight: 300;
+                font-size: 13px;
+                letter-spacing: 0.2px;
+                color: $color-white;
+                display: block;
+                &:hover {
+                    color: $color-green;
+                }
+            }
+        }
+    }
+}
+.newsletter-widget {
+    & p {
+        font-weight: 300;
+        font-size: 13px;
+        letter-spacing: 0.2px;
+        color: $color-white;
+        display: block;
+    }
+    & .newsletter-form {
+        & form {
+            margin: 0;
+            & input {
+                width: 200px;
+                height: 31px;
+                border: 1px solid $color-white;
+                line-height: 23px;
+                padding: 3px 15px;
+                background-color: transparent;
+                color: $color-white;
+                float: left;
+                @media #{$desktop-device}{
+                    width: 170px;
+                }
+            }
+            & button {
+                width: 40px;
+                height: 31px;
+                text-align: center;
+                background-color: $color-green;
+                color: $color-white;
+                border: none;
+                margin-left: -1px;
+                & i {
+                    font-size: 18px;
+                    line-height: 31px;
+                }
+                &:hover {
+                    background-color: darken($color-green, 5);
+                }
+            }
+        }
+    }
+    & .social {
+        margin-top: 15px;
+        float: left;
+        & a {
+            display: block;
+            float: left;
+            color: $color-white;
+            width: 24px;
+            height: 24px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 12px;
+            &:hover {
+                background-color: $color-green;
+            }
+            & i {
+                font-size: 15px;
+                line-height: 24px;
+            }
+        }
+    }
+}
+
+
+.footer-bottom-area {
+    background-color: #212121;
+    padding: 14px 0 6px;
+    float: left;
+    width: 100%;
+    display: block;
+}
+.copyright {
+    @media #{$large-mobile}{
+        text-align: center;
+    }
+    & p {
+        line-height: 24px;
+        margin-bottom: 6px;
+        color: $color-white;
+        & span {
+            color: $color-red;
+        }
+    }
+}
+.author-credit {
+    @media #{$large-mobile}{
+        text-align: center;
+    }
+    & p {
+        line-height: 24px;
+        margin-bottom: 6px;
+        color: $color-white;
+        & a {
+            &:hover {
+                color: $color-red;
+            }
+        }
+        & i {
+            color: $color-red;
+        }
+    }
+}

@@ -1,0 +1,207 @@
+/*----------------------------------------*/
+/*  3.  Hero Area
+/*----------------------------------------*/
+.hero-item {
+    padding: 158px 0 69px;
+    @media #{$tablet-device}{
+        padding: 120px 0;
+    }
+    @media #{$large-mobile}{
+        padding: 100px 0;
+    }
+    & .content {
+        margin-top: 60px;
+        @media #{$laptop-device}{
+            padding-right: 100px;
+        }
+        @media #{$tablet-device}{
+            margin-top: 0;
+        }
+        @media #{$large-mobile}{
+            margin-top: 0;
+        }
+        & * {
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            -webkit-animation-name: fadeOutDown;
+            animation-name: fadeOutDown;
+        }
+        & h2 {
+            font-size: 36px;
+            font-family: $font-montserrat;
+            font-weight: bold;
+            color: $color-green;
+            text-transform: uppercase;
+            margin-bottom: 0;
+            -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s;
+            @media #{$desktop-device}{
+                font-size: 26px;
+                margin-bottom: 5px;
+            }
+            @media #{$tablet-device}{
+                font-size: 30px;
+                margin-bottom: 5px;
+            }
+            @media #{$large-mobile}{
+                font-size: 20px;
+                margin-bottom: 5px;
+            }
+        }
+        & h1 {
+            font-size: 50px;
+            font-family: $font-montserrat;
+            font-weight: bold;
+            color: $color-white;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            -webkit-animation-delay: 0.8s;
+            animation-delay: 0.8s;
+            @media #{$laptop-device}{
+                font-size: 46px;
+            }
+            @media #{$desktop-device}{
+                font-size: 36px;
+            }
+            @media #{$tablet-device}{
+                font-size: 40px;
+            }
+            @media #{$large-mobile}{
+                font-size: 26px;
+            }
+        }
+        & p {;
+            color: $color-white;
+            font-size: 16px;
+            line-height: 28px;
+            font-weight: 300;
+            margin-bottom: 35px;
+            -webkit-animation-delay: 1.2s;
+            animation-delay: 1.2s;
+            @media #{$large-mobile}{
+                font-size: 14px;
+                line-height: 24px;
+            }
+        }
+        & a {
+            height: 50px;
+            padding: 13px 38px;
+            line-height: 24px;
+            display: inline-block;
+            font-family: $font-montserrat;
+            background-color: $color-green;
+            color: $color-white;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-weight: 600;
+            -webkit-animation-delay: 1.6s;
+            animation-delay: 1.6s;
+            @media #{$large-mobile}{
+                height: 40px;
+                padding: 8px 25px;
+            }
+            &:hover {
+                background-color: darken($color-green, 5);
+            }
+        }
+    }
+    & .images {
+        width: 470px;
+        padding: 153px 77px 0 149px;
+        position: relative;
+        @media #{$laptop-device}{
+            margin-left: -70px;
+        }
+        @media #{$desktop-device}{
+            @include transform(scale(.85));
+            @include transform-origin(left top);
+            margin-left: -30px;
+        }
+        & img {
+            position: absolute;
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+        & img[class^="icon-"] {
+            -webkit-animation-name: fadeOut;
+            animation-name: fadeOut;
+        }
+        & img.main {
+            position: static;
+            -webkit-animation-name: fadeOutDown;
+            animation-name: fadeOutDown;
+        }
+        & img.icon-1 {
+            right: 4px;
+            top: 267px;
+           -webkit-animation-delay: 1s;
+           animation-delay: 1s;
+        }
+        & img.icon-2 {
+            right: 0;
+            top: 137px;
+           -webkit-animation-delay: 1.2s;
+           animation-delay: 1.2s;
+        }
+        & img.icon-3 {
+            right: 85px;
+            top: 31px;
+           -webkit-animation-delay: 1.4s;
+           animation-delay: 1.4s;
+        }
+        & img.icon-4 {
+            left: 157px;
+            top: 0;
+           -webkit-animation-delay: 1.6s;
+           animation-delay: 1.6s;
+        }
+        & img.icon-5 {
+            left: 37px;
+            top: 85px;
+           -webkit-animation-delay: 1.8s;
+           animation-delay: 1.8s;
+        }
+        & img.icon-6 {
+            left: 0;
+            top: 223px;
+           -webkit-animation-delay: 2s;
+           animation-delay: 2s;
+        }
+        & img.icon-7 {
+            left: 48px;
+            bottom: 160px;
+           -webkit-animation-delay: 2.2s;
+           animation-delay: 2.2s;
+        }
+    }
+    &.slick-active {
+        & h2 {
+            -webkit-animation-name: fadeInUp;
+            animation-name: fadeInUp;
+        }
+        & h1 {
+            -webkit-animation-name: fadeInUp;
+            animation-name: fadeInUp;
+        }
+        & p {
+            -webkit-animation-name: fadeInUp;
+            animation-name: fadeInUp;
+        }
+        & a {
+            -webkit-animation-name: fadeInUp;
+            animation-name: fadeInUp;
+        }
+        & img.main {
+            -webkit-animation-name: fadeInUp;
+            animation-name: fadeInUp;
+        }
+        & img[class^="icon-"] {
+            -webkit-animation-name: fadeIn;
+            animation-name: fadeIn;
+        }
+    }
+}

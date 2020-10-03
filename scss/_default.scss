@@ -1,0 +1,146 @@
+/*-- Section Title --*/
+.section-title {
+    & h1 {
+        font-size: 36px;
+        color: $heading-color;
+        text-transform: uppercase;
+        line-height: 28px;
+        padding-bottom: 29px;
+        margin: 0;
+        position: relative;
+        font-family: $font-montserrat;
+        @media #{$large-mobile}{
+            font-size: 30px;
+            line-height: 22px;
+        }
+        @media #{$small-mobile}{
+            font-size: 20px;
+            line-height: 14px;
+            padding-bottom: 15px;
+        }
+        &::before {
+            border-bottom: 2px dashed $heading-color;
+            bottom: 0;
+            content: "";
+            height: 2px;
+            left: 50%;
+            margin-left: -51px;
+            position: absolute;
+            width: 102px;
+        }
+    }
+    &.title-white h1 {
+        color: $color-white;
+        &::before {
+            border-color: $color-white;
+        }
+    }
+}
+
+
+.page-banner-area {
+    background-image: url(img/hero/bg.jpg);
+    & .page-banner {
+        & h2 {
+            color: $color-white;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-family: $font-montserrat;
+        }
+        & .breadcrumb {
+            padding: 0;
+            background-color: transparent;
+            border-radius: 0;
+            margin-bottom: 0;
+            & li {
+                & a {
+                    color: $color-white;
+                    &:hover {
+                        color: $color-green;
+                    }
+                }
+                & + li::before {
+                    font-size: 8px;
+                    color: $color-white;
+					content: "/\00a0";
+					padding: 0 5px;
+                }
+            }
+        }
+    }
+}
+
+
+
+form {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+.input-box {
+    width: 100%;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    float: left;
+    display: block;
+    & input[type="text"] {
+        display: block;
+        width: 100%;
+        border: 1px solid rgba($heading-color, 0.50);
+        color: $text-color;
+        background-color: transparent;
+        height: 40px;
+        line-height: 24px;
+        padding: 7px 15px;
+    }
+    & input[type="email"] {
+        display: block;
+        width: 100%;
+        border: 1px solid rgba($heading-color, 0.50);
+        color: $text-color;
+        background-color: transparent;
+        height: 40px;
+        line-height: 24px;
+        padding: 7px 15px;
+    }
+    & textarea {
+        display: block;
+        width: 100%;
+        border: 1px solid rgba($heading-color, 0.50);
+        color: $text-color;
+        background-color: transparent;
+        height: 150px;
+        line-height: 24px;
+        padding: 7px 15px;
+    }
+    & input[type="submit"] {
+        display: block;
+        border: 1px solid rgba($heading-color, 0.50);
+        color: $text-color;
+        background-color: transparent;
+        height: 40px;
+        line-height: 24px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        padding: 7px 45px;
+        text-transform: uppercase;
+        &:hover {
+            background-color: $color-navy;
+            color: $color-white;
+        }
+    }
+}
+.submit-box {
+    width: auto;
+    margin-bottom: 0;
+}
+.input-box-2 {
+    width: 100%;
+    float: left;
+    display: block;
+    & .input-box {
+        width: 50%;
+        @media #{$small-mobile}{
+            width: 100%;
+        }
+    }
+}

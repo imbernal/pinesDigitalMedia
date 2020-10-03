@@ -1,0 +1,58 @@
+/*----------------------------------------*/
+/*  8.  Progress Area
+/*----------------------------------------*/
+.progress-area {}
+.single-progress {
+    @media #{$large-mobile}{
+        padding: 0 80px;
+    }
+    @media #{$small-mobile}{
+        padding: 0 15px;
+    }
+    &::before {
+        background-image: url("img/progress/arrow.png");
+        background-position: right center;
+        background-repeat: no-repeat;
+        content: "";
+        height: 10px;
+        left: 50%;
+        margin-left: 70px;
+        position: absolute;
+        top: 45px;
+        width: 159px;
+        @media #{$desktop-device}{
+            width: 100px;
+        }
+        @media #{$tablet-device}{
+            width: 165px;
+        }
+        @media #{$large-mobile}{
+            display: none;
+        }
+    }
+    &:last-child::before {
+        display: none;
+    }
+    @media #{$tablet-device}{
+        &:nth-child(2)::before {
+            display: none;
+        }
+    }
+    & img {
+        margin-bottom: 20px;
+    }
+    & h4 {
+        font-family: $font-montserrat;
+        font-size: 15px;
+        line-height: 11px;
+        color: $heading-color;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 14px;
+    }
+    & p {
+        font-size: 13px;
+        line-height: 22px;
+        color: $text-color;
+    }
+}

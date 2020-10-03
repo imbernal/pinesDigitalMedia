@@ -1,0 +1,81 @@
+/*----------------------------------------*/
+/*  4.  Feature Area
+/*----------------------------------------*/
+.feature-area {}
+.single-feature {
+    text-align: center;
+    padding: 66px 20px 43px;
+    position: relative;
+    margin-top: 41px;
+    & .icon {
+        width: 83px;
+        height: 83px;
+        border: 2px solid $color-white;
+        border-radius: 50px;
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: -41px;
+        margin-left: -41px;
+    }
+    & .bg-image {
+        bottom: 0;
+        opacity: 0.06;
+        position: absolute;
+        right: 0;
+    }
+    & h4 {
+        color: $color-white;
+        position: relative;
+        font-size: 20px;
+        font-weight: 500;
+        text-transform: capitalize;
+        padding-bottom: 13px;
+        margin-bottom: 16px;
+        &::before {
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            background-color: $color-white;
+            height: 1px;
+            width: 38px;
+            margin-left: -19px;
+            bottom: 0;
+            content: "";
+        }
+        &::after {
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            background-color: $color-white;
+            height: 1px;
+            width: 56px;
+            margin-left: -28px;
+            bottom: 4px;
+            content: "";
+        }
+    }
+    & p {
+        color: $color-white;
+        font-size: 13px;
+        line-height: 23px;
+    }
+    &.green {
+        background-color: $color-green;
+        & img {
+            background-color: $color-green;
+        }
+    }
+    &.red {
+        background-color: $color-red;
+        & img {
+            background-color: $color-red;
+        }
+    }
+    &.navy {
+        background-color: $color-navy;
+        & img {
+            background-color: $color-navy;
+        }
+    }
+}

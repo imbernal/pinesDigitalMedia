@@ -1,0 +1,97 @@
+/*----------------------------------------*/
+/*  6.  Service Area
+/*----------------------------------------*/
+.service-area {}
+.service-wrapper {
+    background: rgba(0, 0, 0, 0) url("img/service/line.png") no-repeat scroll center center;
+    @media #{$desktop-device}{
+        background-position: center 35px;
+    }
+    @media #{$tablet-device}{
+        background-image: none;
+    }
+    @media #{$large-mobile}{
+        background-image: none;
+    }
+}
+.service-item {
+    margin: 45px 0;
+    @media #{$tablet-device}{
+        margin-top: 0;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    @media #{$large-mobile}{
+        margin-top: 0;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    & .ss-wrap {
+        @media #{$tablet-device}{
+            padding: 0 75px;
+        }
+        @media #{$large-mobile}{
+            padding: 0 !important;
+        }
+        @media #{$small-mobile}{
+            text-align: center;
+        }
+        & img {
+            width: 109px;
+            height: 109px;
+            @media #{$small-mobile}{
+                float: none !important;
+                height: 80px;
+                margin: 0 auto 15px !important;
+                width: 80px;
+            }
+        }
+        & .content {
+            @media #{$small-mobile}{
+                text-align: center !important;
+            }
+            & h3 {
+                font-size: 24px;
+                text-transform: capitalize;
+                @media #{$small-mobile}{
+                    font-size: 18px;
+                }
+            }
+            & p {
+                line-height: 25px;
+                font-size: 14px;
+                color: $text-color;
+            }
+        }
+    }
+    &:nth-child(2n+1) {
+        & .ss-wrap {
+            padding-right: 75px;
+            & img {
+                float: right;
+                margin-left: 34px;
+            }
+            & .content {
+                text-align: right;
+                & h3 {}
+                & p {}
+            }
+        }
+    }
+    &:nth-child(2n) {
+        & .ss-wrap {
+            padding-left: 75px;
+            & img {
+                float: left;
+                margin-right: 34px;
+            }
+            & .content {
+                text-align: left;
+                & h3 {}
+                & p {}
+            }
+        }
+    }
+}

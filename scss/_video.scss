@@ -1,0 +1,71 @@
+/*----------------------------------------*/
+/*  5.  Video Area
+/*----------------------------------------*/
+.video-area {
+    background-color: $color-green;
+}
+.video-wrapper {
+    margin-right: 58px;
+    @media #{$desktop-device}{
+        margin-right: 0;
+    }
+    @media #{$tablet-device}{
+        margin-right: 0;
+    }
+    @media #{$large-mobile}{
+        margin-right: 0;
+    }
+}
+.video-content {
+    & h1 {
+        font-size: 50px;
+        font-family: $font-montserrat;
+        font-weight: bold;
+        color: $color-white;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        @media #{$desktop-device}{
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        @media #{$large-mobile}{
+            font-size: 36px;
+        }
+        @media #{$small-mobile}{
+            font-size: 24px;
+        }
+        & span {
+            color: $color-navy;
+        }
+    }
+    & p {
+        font-family: $font-montserrat;
+        color: $color-white;
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 300;
+        margin-bottom: 32px;
+        @media #{$desktop-device}{
+            margin-bottom: 20px;
+        }
+    }
+    & .read-more {
+        height: 50px;
+        padding: 13px 38px;
+        line-height: 24px;
+        display: inline-block;
+        font-family: $font-montserrat;
+        background-color: $color-navy;
+        color: $color-white;
+        border-radius: 5px;
+        text-transform: uppercase;
+        font-weight: 600;
+        @media #{$large-mobile}{
+            height: 40px;
+            padding: 8px 25px;
+        }
+        &:hover {
+            background-color: darken($color-navy, 5);
+        }
+    }
+}

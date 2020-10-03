@@ -1,0 +1,263 @@
+/*----------------------------------------*/
+/*  2.  Header Area
+/*----------------------------------------*/
+/*-- Header Top Bar --*/
+.header-top-bar {
+    width: 100%;
+    display: block;
+    float: left;
+    & span {
+        width: 25%;
+        display: block;
+        float: left;
+        height: 8px;
+        &.blue {
+            background-color: $color-blue;
+        }
+        &.green {
+            background-color: $color-green;
+        }
+        &.navy {
+            background-color: $color-navy;
+        }
+        &.red {
+            background-color: $color-red;
+        }
+    }
+}
+
+/*-- Header Area --*/
+.header-area {
+    float: left;
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 8px;
+    background-color: $color-white;
+    z-index: 99999;
+    &.stick {
+        position: fixed;
+        top: 0;
+        box-shadow: 0 0 3px rgba(#000, 0.15);
+        -webkit-animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+        animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+        & .header-search {
+            padding: 26px 0;
+            @media #{$large-mobile}{
+                padding: 16px 0;
+            }
+        }
+        & .main-menu {
+            margin: 26px 0;
+            @media #{$large-mobile}{
+                margin: 0;
+            }
+        }
+    }
+    & .logo {
+        display: inline-block;
+        margin: 15px 0;
+        @media #{$tablet-device}{
+            width: 140px;
+        }
+        @media #{$large-mobile}{
+            width: 140px;
+        }
+        & img {
+            width: 100%;
+        }
+    }
+}
+/*-- Animation For Stick Menu --*/
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+/*-- Menu Toggle --*/
+.header-buttons {
+    position: relative;
+	display: flex;
+	align-items: center;
+}
+/*-- Header Search --*/
+.header-search {
+    padding: 36px 0;
+    position: relative;
+    @media #{$large-mobile}{
+        padding: 26px 0;
+        position: static;
+    }
+    & .search-toggle {
+        display: block;
+        width: 28px;
+        height: 28px;
+        background-color: $color-red;
+        border-radius: 50px;
+        color: $color-white;
+        border: none;
+        &:hover {
+            background-color: darken($color-red, 10);
+        }
+        & i {
+            font-size: 18px;
+            line-height: 28px;
+        }
+    }
+}
+.header-search-form {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: 999;
+    background-color: $color-white;
+    padding: 15px;
+    border: 1px solid #f1f1f1;
+    margin-top: 30px;
+    opacity: 0;
+    visibility: hidden;
+    @include transition(all 0.3s ease 0s);
+    &.active {
+        margin-top: 0;
+        visibility: visible;
+        opacity: 1;
+    }
+    & form {
+        width: 256px;
+        margin: 0;
+        & input {
+            display: block;
+            float: left;
+            width: 220px;
+            border: 1px solid #f1f1f1;
+            padding: 5px 10px;
+            font-weight: 300;
+            height: 36px;
+        }
+        & .submit {
+            height: 36px;
+            border: none;
+            background-color: #f1f1f1;
+            width: 36px;
+            color: $heading-color;
+            &:hover {
+                background-color: $color-red;
+                color: $color-white;
+            }
+            & i {
+                font-size: 18px;
+                line-height: 36px;
+                display: block;
+            }
+        }
+    }
+}
+.menu-toggle {
+    margin-left: 20px;
+    width: 28px;
+    height: 28px;
+    border: none;
+    background-color: $color-red;
+    border-radius: 50px;
+    color: $color-white;
+    padding: 0;
+    overflow: hidden;
+    &:hover {
+        background-color: darken($color-red, 10);
+    }
+    @media #{$large-mobile}{
+        margin-left: 15px;
+    }
+    & i {
+        display: block;
+        font-size: 16px;
+        line-height: 28px;
+    }
+}
+/*-- Menu --*/
+.main-menu {
+    margin: 36px 0;
+    @media #{$large-mobile}{
+        margin: 0;
+        width: 100%;
+        float: left;
+    }
+    & nav {
+        @media #{$large-mobile}{
+            padding-bottom: 10px;
+        }
+        & ul {
+            & li {
+                display: block;
+                float: left;
+                margin-left: 40px;
+                @media #{$desktop-device}{
+                    margin-left: 35px;
+                }
+                @media #{$tablet-device}{
+                    margin-left: 20px;
+                }
+                @media #{$large-mobile}{
+                    float: none;
+                    margin-left: 0;
+                    margin-bottom: 10px;
+                }
+                &:first-child {
+                    margin-left: 0;
+                }
+                & a {
+                    border-top: 1px solid transparent;
+                    display: block;
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    color: #2f2f2f;
+                    line-height: 22px;
+                    font-weight: 500;
+                    margin: 3px 0 2px;
+                    @media #{$tablet-device}{
+                        font-size: 12px;
+                    }
+                    &:hover {
+                        border-top: 1px solid $color-red;
+                        color: $color-red;
+                        @media #{$large-mobile}{
+                            border-color: transparent;
+                        }
+                    }
+                }
+                &.active a {
+                    border-top: 1px solid $color-red;
+                    color: $color-red;
+                    @media #{$large-mobile}{
+                        border-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+}

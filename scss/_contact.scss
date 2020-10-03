@@ -1,0 +1,36 @@
+/*----------------------------------------*/
+/*  14.  Contact Area
+/*----------------------------------------*/
+.contact-area {
+    background-color: $color-navy;
+}
+#contact-map {
+    height: 330px;
+    width: 100%;
+}
+.contact-form.form-white {
+    & form {
+        & .input-box {
+            & input[type="text"] {
+                border: 1px solid rgba($color-white, 0.50);
+                color: rgba($color-white, 0.50);
+            }
+            & input[type="email"] {
+                border: 1px solid rgba($color-white, 0.50);
+                color: rgba($color-white, 0.50);
+            }
+            & textarea {
+                border: 1px solid rgba($color-white, 0.50);
+                color: rgba($color-white, 0.50);
+            }
+            & input[type="submit"] {
+                border: 1px solid rgba($color-white, 0.50);
+                color: rgba($color-white, 0.50);
+                &:hover {
+                    background-color: $color-white;
+                    color: $color-navy;
+                }
+            }
+        }
+    }
+}
